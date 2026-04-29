@@ -362,6 +362,50 @@ img { display: block; max-width: 100%; }
 }
 .card-link:hover { color: var(--accent-light); }
 
+/* ── Publications ── */
+.pub-category {
+  margin-bottom: 48px;
+}
+.pub-cat-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.pub-list {
+  list-style: none;
+  counter-reset: pub-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+}
+.pub-list li {
+  counter-increment: pub-counter;
+  display: flex;
+  gap: 14px;
+  font-size: .9rem;
+  line-height: 1.7;
+}
+.pub-list li::before {
+  content: counter(pub-counter) ".";
+  color: var(--accent);
+  font-weight: 600;
+  font-size: .82rem;
+  min-width: 22px;
+  flex-shrink: 0;
+  padding-top: 3px;
+}
+.pub-content {
+  color: var(--text);
+}
+.pub-content em {
+  color: var(--text-muted);
+}
+
 /* ── AI Projects ── */
 .projects-grid {
   display: grid;
